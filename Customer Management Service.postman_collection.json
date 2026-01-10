@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "79f8cfcd-76ff-4398-ad19-369823071626",
+		"name": "Customer Management Service",
+		"description": "REST APIs for managing bank customers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51324813",
+		"_collection_link": "https://tahakasimsaifee53-9570777.postman.co/workspace/taha-saifee's-Workspace~05b81bbb-ab03-47fd-8b85-8f3f3716bb1c/collection/51324813-79f8cfcd-76ff-4398-ad19-369823071626?action=share&source=collection_link&creator=51324813"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "customers",
+							"item": [
+								{
+									"name": "onboard-customer",
+									"item": [
+										{
+											"name": "Onboard a new customer",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "taha21",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "taha21",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"customerId\": \"2846553\",\n    \"customerType\": \"CORPORATE\",\n    \"legalId\": \"322060305153\",\n    \"name\": \"Qusai Saifee\",\n    \"status\": \"ACTIVE\",\n    \"address\": {\n        \"addressLine1\": \"Salmiya Block 10, Edee Bookstore Building\",\n        \"addressLine2\": \"Near Salmiya Park\",\n        \"area\": \"Salmiya\",\n        \"buildingNo\": \"15\",\n        \"governorate\": \"Hawalli\"\n    },\n    \"email\": \"tahasaifee2@gmail.com\",\n    \"phone\": \"73618833\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/customers/onboard-customer",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"customers",
+														"onboard-customer"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"customerId\": \"1227813\",\n  \"customerType\": \"RETAIL\",\n  \"legalId\": \"string\",\n  \"name\": \"string\",\n  \"status\": \"BLOCKED\",\n  \"address\": {\n    \"addressLine1\": \"string\",\n    \"addressLine2\": \"string\",\n    \"area\": \"string\",\n    \"buildingNo\": \"string\",\n    \"governorate\": \"string\",\n    \"id\": 7249\n  },\n  \"email\": \"Zv9NPK7@hpPiONtZPeb.yk\",\n  \"phone\": \"69018588\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/customers/onboard-customer",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"customers",
+																"onboard-customer"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"response\": {\n    \"customerType\": \"CORPORATE\",\n    \"legalId\": \"string\",\n    \"name\": \"string\",\n    \"status\": \"BLOCKED\",\n    \"customerId\": \"9658199\",\n    \"address\": {\n      \"addressLine1\": \"string\",\n      \"addressLine2\": \"string\",\n      \"area\": \"string\",\n      \"buildingNo\": \"string\",\n      \"governorate\": \"string\",\n      \"id\": 951\n    },\n    \"email\": \"LnnQ7RMl6SH@IgJyHkRo.iak\",\n    \"phone\": \"string\",\n    \"accounts\": [\n      {\n        \"accountId\": \"string\",\n        \"accountType\": \"CURRENT\",\n        \"currency\": \"string\",\n        \"balance\": 5676.455350152114,\n        \"status\": \"BLOCKED\",\n        \"createdAt\": \"2003-01-04T16:27:33.575Z\",\n        \"updatedAt\": \"1971-02-09T10:03:49.931Z\"\n      },\n      {\n        \"accountId\": \"string\",\n        \"accountType\": \"ALAMEL\",\n        \"currency\": \"string\",\n        \"balance\": 7304.574276758855,\n        \"status\": \"BLOCKED\",\n        \"createdAt\": \"1973-05-10T15:59:57.295Z\",\n        \"updatedAt\": \"1987-07-26T07:30:05.903Z\"\n      }\n    ],\n    \"createdAt\": \"1971-09-07T14:59:45.610Z\"\n  },\n  \"responseCode\": 9408,\n  \"errorMessage\": \"string\",\n  \"httpStatus\": \"422 UNPROCESSABLE_CONTENT\",\n  \"timestamp\": \"2006-11-28T08:44:48.721Z\",\n  \"validationErrors\": [\n    \"string\",\n    \"string\"\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "create-account",
+									"item": [
+										{
+											"name": "Create a new account",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "taha21",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "taha21",
+															"type": "string"
+														}
+													]
+												},
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"accountStatus\": \"ACTIVE\",\n    \"accountType\": \"CURRENT\",\n    \"customerId\": \"2846553\",\n    \"customerType\": \"RETAIL\",\n    \"currency\": \"USD\",\n    \"depositAmount\": 10000000\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/customers/create-account",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"customers",
+														"create-account"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"accountStatus\": \"DORMANT\",\n  \"accountType\": \"SAVING\",\n  \"currency\": \"string\",\n  \"customerId\": \"4518137\",\n  \"customerType\": \"RETAIL\",\n  \"depositAmount\": 6437.0511011251465\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/customers/create-account",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"customers",
+																"create-account"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"response\": \"string\",\n  \"responseCode\": 8149,\n  \"errorMessage\": \"string\",\n  \"httpStatus\": \"511 NETWORK_AUTHENTICATION_REQUIRED\",\n  \"timestamp\": \"1990-03-07T13:13:46.810Z\",\n  \"validationErrors\": [\n    \"string\",\n    \"string\"\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "{customerId}",
+									"item": [
+										{
+											"name": "Get Onboarded customer By Id",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "taha21",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "taha21",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/customers/:customerId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"customers",
+														":customerId"
+													],
+													"variable": [
+														{
+															"key": "customerId",
+															"value": "2846553"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/customers/:customerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"customers",
+																":customerId"
+															],
+															"variable": [
+																{
+																	"key": "customerId",
+																	"value": "string"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"response\": {\n    \"customerType\": \"CORPORATE\",\n    \"legalId\": \"string\",\n    \"name\": \"string\",\n    \"status\": \"BLOCKED\",\n    \"customerId\": \"9658199\",\n    \"address\": {\n      \"addressLine1\": \"string\",\n      \"addressLine2\": \"string\",\n      \"area\": \"string\",\n      \"buildingNo\": \"string\",\n      \"governorate\": \"string\",\n      \"id\": 951\n    },\n    \"email\": \"LnnQ7RMl6SH@IgJyHkRo.iak\",\n    \"phone\": \"string\",\n    \"accounts\": [\n      {\n        \"accountId\": \"string\",\n        \"accountType\": \"CURRENT\",\n        \"currency\": \"string\",\n        \"balance\": 5676.455350152114,\n        \"status\": \"BLOCKED\",\n        \"createdAt\": \"2003-01-04T16:27:33.575Z\",\n        \"updatedAt\": \"1971-02-09T10:03:49.931Z\"\n      },\n      {\n        \"accountId\": \"string\",\n        \"accountType\": \"ALAMEL\",\n        \"currency\": \"string\",\n        \"balance\": 7304.574276758855,\n        \"status\": \"BLOCKED\",\n        \"createdAt\": \"1973-05-10T15:59:57.295Z\",\n        \"updatedAt\": \"1987-07-26T07:30:05.903Z\"\n      }\n    ],\n    \"createdAt\": \"1971-09-07T14:59:45.610Z\"\n  },\n  \"responseCode\": 9408,\n  \"errorMessage\": \"string\",\n  \"httpStatus\": \"422 UNPROCESSABLE_CONTENT\",\n  \"timestamp\": \"2006-11-28T08:44:48.721Z\",\n  \"validationErrors\": [\n    \"string\",\n    \"string\"\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "list-onboard-customers",
+									"item": [
+										{
+											"name": "Get All Onboarded Customers",
+											"request": {
+												"auth": {
+													"type": "basic",
+													"basic": [
+														{
+															"key": "password",
+															"value": "taha21",
+															"type": "string"
+														},
+														{
+															"key": "username",
+															"value": "taha21",
+															"type": "string"
+														}
+													]
+												},
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/v1/customers/list-onboard-customers",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"v1",
+														"customers",
+														"list-onboard-customers"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/customers/list-onboard-customers",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"customers",
+																"list-onboard-customers"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "*/*"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"response\": [\n    {\n      \"customerType\": \"CORPORATE\",\n      \"legalId\": \"string\",\n      \"name\": \"string\",\n      \"status\": \"BLOCKED\",\n      \"customerId\": \"3552067\",\n      \"address\": {\n        \"addressLine1\": \"string\",\n        \"addressLine2\": \"string\",\n        \"area\": \"string\",\n        \"buildingNo\": \"string\",\n        \"governorate\": \"string\",\n        \"id\": 2232\n      },\n      \"email\": \"F1C9oL2oM29@pPuiRytPdTRjYHTJqAVWBybq.qzc\",\n      \"phone\": \"string\",\n      \"accounts\": [\n        {\n          \"accountId\": \"string\",\n          \"accountType\": \"CURRENT\",\n          \"currency\": \"string\",\n          \"balance\": 7613.893889481295,\n          \"status\": \"ACTIVE\",\n          \"createdAt\": \"2010-03-06T06:36:53.137Z\",\n          \"updatedAt\": \"1992-10-28T13:40:00.982Z\"\n        },\n        {\n          \"accountId\": \"string\",\n          \"accountType\": \"ALSEDRA\",\n          \"currency\": \"string\",\n          \"balance\": 3149.70476755841,\n          \"status\": \"DORMANT\",\n          \"createdAt\": \"2004-03-07T10:45:50.739Z\",\n          \"updatedAt\": \"2007-01-19T21:30:20.638Z\"\n        }\n      ],\n      \"createdAt\": \"1994-11-13T16:47:12.872Z\"\n    },\n    {\n      \"customerType\": \"INVESTMENT\",\n      \"legalId\": \"string\",\n      \"name\": \"string\",\n      \"status\": \"BLOCKED\",\n      \"customerId\": \"1255593\",\n      \"address\": {\n        \"addressLine1\": \"string\",\n        \"addressLine2\": \"string\",\n        \"area\": \"string\",\n        \"buildingNo\": \"string\",\n        \"governorate\": \"string\",\n        \"id\": 6329\n      },\n      \"email\": \"4MzUoo@IgOOtOwCSrTJpVPAuLFT.ksce\",\n      \"phone\": \"string\",\n      \"accounts\": [\n        {\n          \"accountId\": \"string\",\n          \"accountType\": \"CURRENT\",\n          \"currency\": \"string\",\n          \"balance\": 1157.200357488295,\n          \"status\": \"CLOSED\",\n          \"createdAt\": \"1992-04-12T17:17:15.813Z\",\n          \"updatedAt\": \"1995-11-07T11:42:33.686Z\"\n        },\n        {\n          \"accountId\": \"string\",\n          \"accountType\": \"NUWAIR\",\n          \"currency\": \"string\",\n          \"balance\": 5900.378545937794,\n          \"status\": \"CLOSED\",\n          \"createdAt\": \"2008-07-13T08:37:59.608Z\",\n          \"updatedAt\": \"1958-04-04T03:11:23.147Z\"\n        }\n      ],\n      \"createdAt\": \"1977-08-27T08:25:45.619Z\"\n    }\n  ],\n  \"responseCode\": 4560,\n  \"errorMessage\": \"string\",\n  \"httpStatus\": \"429 TOO_MANY_REQUESTS\",\n  \"timestamp\": \"2007-05-06T11:40:24.360Z\",\n  \"validationErrors\": [\n    \"string\",\n    \"string\"\n  ]\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "fecth-accounts",
+									"item": [
+										{
+											"name": "{customerId}",
+											"item": [
+												{
+													"name": "Get All Accounts By Customer Id",
+													"request": {
+														"auth": {
+															"type": "basic",
+															"basic": [
+																{
+																	"key": "password",
+																	"value": "taha21",
+																	"type": "string"
+																},
+																{
+																	"key": "username",
+																	"value": "taha21",
+																	"type": "string"
+																}
+															]
+														},
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "*/*"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/api/v1/customers/fecth-accounts/:customerId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"api",
+																"v1",
+																"customers",
+																"fecth-accounts",
+																":customerId"
+															],
+															"variable": [
+																{
+																	"key": "customerId",
+																	"value": "2846596"
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "*/*"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/api/v1/customers/fecth-accounts/:customerId",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"api",
+																		"v1",
+																		"customers",
+																		"fecth-accounts",
+																		":customerId"
+																	],
+																	"variable": [
+																		{
+																			"key": "customerId",
+																			"value": "string"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "*/*"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"response\": [\n    {\n      \"accountId\": \"string\",\n      \"accountType\": \"SALARY\",\n      \"currency\": \"string\",\n      \"balance\": 6145.279439873261,\n      \"status\": \"CLOSED\",\n      \"createdAt\": \"1958-04-09T23:43:40.556Z\",\n      \"updatedAt\": \"1981-11-27T18:19:45.624Z\"\n    },\n    {\n      \"accountId\": \"string\",\n      \"accountType\": \"CURRENT\",\n      \"currency\": \"string\",\n      \"balance\": 3285.770808724173,\n      \"status\": \"DORMANT\",\n      \"createdAt\": \"2012-06-06T13:10:00.312Z\",\n      \"updatedAt\": \"1991-12-21T23:06:54.509Z\"\n    }\n  ],\n  \"responseCode\": 8818,\n  \"errorMessage\": \"string\",\n  \"httpStatus\": \"401 UNAUTHORIZED\",\n  \"timestamp\": \"1998-01-01T05:09:03.137Z\",\n  \"validationErrors\": [\n    \"string\",\n    \"string\"\n  ]\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}
